@@ -38,7 +38,7 @@ rm -rf $RPM_BUILD_ROOT
         DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_desktopdir}
-mv -f $RPM_BUILD_ROOT%{_applnkdir}/Utilities/*.desktop \
+mv -f $RPM_BUILD_ROOT/usr/share/applnk/Utilities/*.desktop \
         $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
