@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/mozillaqs/%{name}-%{version}.tar.bz2
 URL:		http://mozillaqs.sourceforge.net/
 BuildRequires:	kdelibs-devel >= 3.1
 BuildRequires:	qt-devel >= 3.1
+BuildRequires:	rpmbuild(macros) >= 129
 Requires:	mozilla-firefox >= 1.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -20,8 +21,8 @@ navigator program from Firefox Quickstarter.
 
 %description -l pl
 Firefox Quickstarter to niewielka, dzia³aj±ca w zasobniku systemowym
-aplikacja KDE. Uruchamia ona ukryt± instancjê Firefoxa. Mo¿liwe jest
-uruchomienie przegl±darki z poziomu Firefox QuickStarter.
+aplikacja KDE. Uruchamia ona ukryt± instancjê Firefoksa. Mo¿liwe jest
+uruchomienie przegl±darki z poziomu Firefox QuickStartera.
 
 %prep
 %setup -q -n %{name}
@@ -35,16 +36,19 @@ uruchomienie przegl±darki z poziomu Firefox QuickStarter.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-        DESTDIR=$RPM_BUILD_ROOT
+        DESTDIR=$RPM_BUILD_ROOT \
+	kde_htmldir=%{_kdedocdir}
 
 install -d $RPM_BUILD_ROOT%{_desktopdir}
 mv -f $RPM_BUILD_ROOT%{_datadir}/applnk/Utilities/*.desktop \
         $RPM_BUILD_ROOT%{_desktopdir}
 
+%find_lang %{name} --with-kde
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
@@ -52,5 +56,3 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/apps/%{name}
 %{_datadir}/apps/%{name}/%{name}ui.rc
 %{_iconsdir}/hicolor/*/apps/%{name}.png
-%dir %{_docdir}/HTML/en/%{name}
-%{_docdir}/HTML/en/%{name}/*
