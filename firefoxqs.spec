@@ -1,5 +1,5 @@
 Summary:	A KDE panel applet for quick access to Firefox
-Summary(pl.UTF-8):   Aplet panelu KDE do szybkiego dostępu do Firefox
+Summary(pl.UTF-8):	Aplet panelu KDE do szybkiego dostępu do Firefox
 Name:		firefoxqs
 Version:	0.1
 Release:	0.1
