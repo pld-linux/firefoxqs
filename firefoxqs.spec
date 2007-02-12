@@ -1,5 +1,5 @@
 Summary:	A KDE panel applet for quick access to Firefox
-Summary(pl):	Aplet panelu KDE do szybkiego dostêpu do Firefox
+Summary(pl.UTF-8):   Aplet panelu KDE do szybkiego dostÄ™pu do Firefox
 Name:		firefoxqs
 Version:	0.1
 Release:	0.1
@@ -19,10 +19,10 @@ Firefox Quickstarter is an small KDE utility that runs in the
 SystemTray and runs a hidden instance of Firefox. You can execute
 navigator program from Firefox Quickstarter.
 
-%description -l pl
-Firefox Quickstarter to niewielka, dzia³aj±ca w zasobniku systemowym
-aplikacja KDE. Uruchamia ona ukryt± instancjê Firefoksa. Mo¿liwe jest
-uruchomienie przegl±darki z poziomu Firefox QuickStartera.
+%description -l pl.UTF-8
+Firefox Quickstarter to niewielka, dziaÅ‚ajÄ…ca w zasobniku systemowym
+aplikacja KDE. Uruchamia ona ukrytÄ… instancjÄ™ Firefoksa. MoÅ¼liwe jest
+uruchomienie przeglÄ…darki z poziomu Firefox QuickStartera.
 
 %prep
 %setup -q -n %{name}
