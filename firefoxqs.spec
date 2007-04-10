@@ -9,7 +9,7 @@ Source0:	http://dl.sourceforge.net/mozillaqs/%{name}-%{version}.tar.bz2
 # Source0-md5:	9ead843ef6838eb48f782c8da5ae4dc5
 URL:		http://mozillaqs.sourceforge.net/
 BuildRequires:	kdelibs-devel >= 3.1
-BuildRequires:	qt-devel >= 3.1
+BuildRequires:	qt-devel >= 6:3.1
 BuildRequires:	rpmbuild(macros) >= 1.129
 Requires:	mozilla-firefox >= 1.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
