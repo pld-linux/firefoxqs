@@ -1,12 +1,12 @@
 Summary:	A KDE panel applet for quick access to Firefox
 Summary(pl.UTF-8):	Aplet panelu KDE do szybkiego dostępu do Firefox
 Name:		firefoxqs
-Version:	0.1
-Release:	0.1
+Version:	0.1.3
+Release:	1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/mozillaqs/%{name}-%{version}.tar.bz2
-# Source0-md5:	9ead843ef6838eb48f782c8da5ae4dc5
+# Source0-md5:	27f5ac663383f45abbbe1dade00ce023
 URL:		http://mozillaqs.sourceforge.net/
 BuildRequires:	kdelibs-devel >= 3.1
 BuildRequires:	qt-devel >= 6:3.1
@@ -50,7 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO
+%doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/*.desktop
 %dir %{_datadir}/apps/%{name}
